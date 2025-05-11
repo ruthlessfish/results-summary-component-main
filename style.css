@@ -1,0 +1,202 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-red-: hsl(0, 100%, 67%);
+    --orangey-yellow-: hsl(39, 100%, 56%);
+    --green-teal-: hsl(166, 100%, 37%);
+    --cobalt-blue-: hsl(234, 85%, 45%);
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-avender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--pale-blue);
+    max-width:1440px;
+    height: 100vh;
+    font-size: 14px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background:var(--white);
+    border-radius:25px;
+    max-width: 560px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+}
+
+button {
+    background: var(--dark-gray-blue);
+    color: var(--white);
+    border-radius: 30px;
+    border: none;
+    padding: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.results {
+    background-color: var(--light-royal-blue);
+    background: linear-gradient(var(--light-slate-blue) 0%, var(--light-royal-blue) 100%);
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    color: var(--white);
+}
+
+.total {
+    display:block;
+    background-color: var(--violet-blue);
+    background: linear-gradient(var(--violet-blue) 0%, var(--persian-blue)                                                                                                              100%);
+    border-radius: 50%;
+    height: 150px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.summary {
+    width:340px;
+    padding: 30px;
+    color: var(--dark-gray-blue);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.summary > h2 {
+    margin-bottom: 16px;
+}
+
+.summary > .score {
+    width:100%;
+    max-width:285px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: var(--pale-glue);    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary > .score > img {
+    margin-right: 10px;
+}
+
+.summary > .score > span {
+    margin-right: 10px;
+}
+
+.summary > .score > span:last-child {
+    margin-right: 0;
+}
+
+.summary > button {
+    width:100%;
+}
+
+.summary > button:hover {
+    background: var(--dark-gray-blue);
+}
+
+.hanken-grotesk-100 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:100;
+    font-style: normal;
+}
+
+.hanken-grotesk-200 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.hanken-grotesk-300 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.hanken-grotesk-400 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hanken-grotesk-500 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hanken-grotesk-600 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hanken-grotesk-700 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hanken-grotesk-800 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+.hanken-grotesk-900 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+a.attribution a { color: hsl(228, 45%, 44%); }

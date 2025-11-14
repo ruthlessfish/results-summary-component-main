@@ -1,4 +1,9 @@
 :root {
+    --base-font-size: 18px;
+
+    --layout-width-mobile: 327px;
+    --layout-width-desktop: 1440px;
+
     --light-red: hsl(0, 100%, 67%);
     --orangey-yellow: hsl(39, 100%, 56%);
     --green-teal: hsl(166, 100%, 37%);
@@ -19,12 +24,14 @@
     --light-avender: hsl(241, 100%, 89%);
     --dark-gray-blue: hsl(224, 30%, 27%);
 
-    --pale-red: hsla(0, 100%, 67%, .1);
-    --pale-orangey-yellow: hsla(39, 100%, 56%, .1);
-    --pale-green-teal: hsla(166, 100%, 37%, .1);
-    --pale-cobalt-blue: hsla(234, 85%, 45%, .1);
+    --pale-red: hsla(0, 100%, 67%, .05);
+    --pale-orangey-yellow: hsla(39, 100%, 56%, .05);
+    --pale-green-teal: hsla(166, 100%, 37%, .05);
+    --pale-cobalt-blue: hsla(234, 85%, 45%, .05);
 
     --pale-white: rgba(255, 255, 255, 50%);
+
+    font-size: var(--base-font-size);
 }
 
 * {
@@ -35,18 +42,24 @@
 
 body {
     background: var(--pale-blue);
-    max-width: 1440px;
+    max-width: var(--layout-width-desktop);
     height: 100vh;
-    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+
+
+#root {
+    width: 100%;
+    max-width: 740px;
 }
 
 main {
     background: var(--white);
     border-radius: 25px;
-    max-width: 560px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: row;
@@ -70,80 +83,96 @@ button {
     background-color: var(--light-royal-blue);
     background: linear-gradient(var(--light-slate-blue) 0%,
             var(--light-royal-blue) 100%);
+    width: 100%;
+    max-width: 370px;
     border-radius: 25px;
-    padding: 30px;
+    padding: 40px 55px;
     text-align: center;
     color: var(--white);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
 .results h2 {
-    font-size: 18px;
+    font-size: 1.25rem;
     color: var(--pale-white);
+    font-weight: 400;
 }
 
 .results h3 {
-    font-size: 1.4em;
-    margin: 1em 0;
+    font-size: 1.75rem;
+    font-weight: 400;
 }
 
 .results p {
-    color: var(--pale-white);
-    font-weight: 500;
+    color: rgb(255, 255, 255, 0.75);
+    font-weight: 300;
+    margin-top:-0.5rem;
 }
 
 .total {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--violet-blue);
     background: linear-gradient(var(--violet-blue) 0%,
             var(--persian-blue) 100%);
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    margin: auto;
-    margin-top: 30px;
-    padding: 30px;
+    height: 200px;
+    width: 200px;
+    padding: 40px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.05rem;
     font-weight: 400;
     color: var(--pale-white);
 }
 
 .total big {
-    font-size: 3em;
+    font-size: 4rem;
+    line-height: 1.1;
     display: block;
     font-weight: 700;
     color: white;
+    text-align: center;
 }
 
 .summary {
-    width: 340px;
-    padding: 30px;
+    width: 100%;
+    max-width: 370px;
+    padding: 2.25rem;
     color: var(--dark-gray-blue);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    flex-shrink: 0;
+    gap: 1rem;
 }
 
-.summary>h2 {
-    margin-bottom: 16px;
-    font-size: 18px;
+.summary > h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 .score {
     width: 100%;
-    max-width: 285px;
     border-radius: 10px;
-    margin-bottom: 10px;
     background: var(--pale-blue);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 0.95rem;
+    font-weight: 500;
 }
 
 .score>img {
     margin-right: 10px;
+    font-weight: 400;
 }
 
 .score>span.label {
@@ -154,6 +183,7 @@ button {
     background-position: left center;
     padding-left: 30px;
     font-weight: bold;
+    font-weight: 500;
 }
 
 .score>span:last-child {
@@ -199,6 +229,10 @@ button {
 
 .summary>button {
     width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .summary>button:hover {

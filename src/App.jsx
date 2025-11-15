@@ -1,3 +1,5 @@
+import scores from "../data.json" with { type: "json" };
+
 const App = () => {
     return (
         <>
@@ -15,25 +17,12 @@ const App = () => {
                 <section className="summary">
                 <h2>Summary</h2>
 
-                <div className="score reaction">
-                    <span className="label">Reaction</span>
-                    <span><strong>80</strong> / 100</span>
-                </div>
-
-                <div className="score memory">
-                    <span className="label">Memory</span>
-                    <span><strong>92</strong> / 100</span>
-                </div>
-
-                <div className="score verbal">
-                    <span className="label">Verbal</span>
-                    <span><strong>61</strong> / 100</span>
-                </div>
-
-                <div className="score visual">
-                    <span className="label">Visual</span>
-                    <span><strong>72</strong> / 100</span>
-                </div>
+                {scores.map((item) => (
+                    <div key={item.category} className={`score ${item.category.toLowerCase()}`}>
+                         <span className="label">{item.category}</span>
+                         <span><strong>{item.score}</strong> / 100</span>
+                    </div>
+                ))}                        
                 <button role="button">Continue</button>
                 </section>
             </main>
